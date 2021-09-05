@@ -6,7 +6,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = load_model('deployment_05092021.pkl')
+model = load_model('deployment_05092021')
 cols = ['VehicleType', 'RegistrationYear', 'Gearbox', 'Power', 'Model',
        'Kilometer', 'FuelType', 'Brand', 'NotRepaired']
 
