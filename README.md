@@ -4,7 +4,7 @@ Predict price of your car
 
 Приложение для предсказания цены автомобиля
 
-[](https://i.ibb.co/yWRF4W0/IMG-20200920-112110-2.jpg)
+![](https://i.ibb.co/yWRF4W0/IMG-20200920-112110-2.jpg)
 
 
 **Признаки:**
