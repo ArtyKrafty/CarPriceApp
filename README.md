@@ -11,17 +11,15 @@ ___
 
 **Признаки:**
 
-- VehicleType (*coupe, suv, small, sedan, convertible, bus,
-       wagon, other*)
+
 - RegistrationYear (*в формате YYYY*)
 - Gearbox (*manual, auto*)
 - Power
-- Model
 - Kilometer
 - FuelType (*petrol, gasoline, lpg, other, hybrid, cng,
        electric*)
 - Brand
-- NotRepaired (*yes, no*)
+
 
 
 ___
