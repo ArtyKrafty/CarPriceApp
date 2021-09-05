@@ -7,7 +7,7 @@ import numpy as np
 app = Flask(__name__)
 
 model = load_model('deployment_05092021.pkl')
-cols = ['Price', 'VehicleType', 'RegistrationYear', 'Gearbox', 'Power', 'Model',
+cols = ['VehicleType', 'RegistrationYear', 'Gearbox', 'Power', 'Model',
        'Kilometer', 'FuelType', 'Brand', 'NotRepaired']
 
 @app.route('/')
