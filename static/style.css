@@ -14,15 +14,12 @@
 html { width: 100%; height:100%; overflow:auto; }
 
 body { 
-	width: 100%;
-	height:100%;
+
 	font-family: 'Open Sans', sans-serif;
-	background: #092756;
 	color: #fff;
-	font-size: 18px;
+	font-size: 11px;
 	text-align:center;
-	letter-spacing:1.2px;
-	background: #000046;  /* fallback for old browsers */
+	letter-spacing:0.1px;
 	background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
