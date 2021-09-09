@@ -17,7 +17,7 @@ body {
 
 	font-family: 'Open Sans', 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
 	color: #fff;
-	font-size: 11px;
+	font-size: 12px;
 	text-align:center;
 	background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -26,8 +26,8 @@ body {
 }
 
 .container {
-  margin: 80px auto;
-  width: 400px;
+  margin: 20px auto;
+  width: 200px;
   text-align: center;
 }
 
@@ -178,7 +178,7 @@ body {
 	height:400px;
 }
 
-.login h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+.login h1 { color: #fff; text-shadow: 0 0 20px rgba(0,0,0,1.5); letter-spacing:5px; text-align:center; }
 
 input { 
 	width: 100%; 
@@ -186,8 +186,8 @@ input {
 	background: rgba(0,0,0,0.3);
 	border: none;
 	outline: none;
-	padding: 10px;
-	font-size: 13px;
+	padding: 5px;
+	font-size: 12px;
 	color: #fff;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 	border: 1px solid rgba(0,0,0,0.3);
