@@ -18,11 +18,11 @@
 
      <!-- Form to enter new data for predictions  -->
     <form action="{{ url_for('predict')}}"method="POST">
-    <label for="RegistrationYear">Year of registration:</label><br> 
+    <label for="RegistrationYear">First registration:</label><br> 
     <input type="number" name="RegistrationYear" placeholder="RegistrationYear" required="required" min="1900" max="2021" value="2010"/>  <br><br>
-    <label for="Power">Power:</label><br>    
+    <label for="Power">Power, kW:</label><br>    
     <input type="number" name="Power" placeholder="Power" required="required"  min="0" max="600" value="130"/>  <br><br>
-    <label for="Kilometer">Kilometer:</label><br>
+    <label for="Kilometer">Mileage:</label><br>
     <input type="number" name="Kilometer" placeholder="Kilometer" required="required"   min="0" max="1000000" value="75000"/>  <br><br>
     <section class="container" style="display: inline;">
     <div class="dropdown dropdown-dark">
