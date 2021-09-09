@@ -22,7 +22,7 @@ def predict():
     prediction = int(prediction.Label[0])
     
 
-    return render_template('home.html',pred_1=f'Expected Price for {final[5]} of {final[0]} year, with {final[1]} kW, {final[2]} miles run, {final[3]} gearbox, {final[4]} fuel type will be', pred_2=f'{prediction} $')
+    return render_template('home.html',pred_1=f'Expected Price for {final[5]} of {final[0]} year, with {final[1]} kW, {final[2]} miles run, {final[3]} gearbox, {final[4]} fuel type will be', pred_2=f'${prediction}')
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
