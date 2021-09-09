@@ -37,7 +37,7 @@ body {
 }
 
 .dropdown {
-  display: inline-block;
+  display: inline;
   position: relative;
   overflow: hidden;
   height: 28px;
