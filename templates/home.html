@@ -18,16 +18,79 @@
 
      <!-- Form to enter new data for predictions  -->
     <form action="{{ url_for('predict')}}"method="POST">
-      
-    	<input type="text" name="RegistrationYear" placeholder="RegistrationYear" required="required" /><br>
-        <input type="text" name="Gearbox" placeholder="Gearbox" required="required" /><br>
-        <input type="text" name="Power" placeholder="Power" required="required" /><br>
-        <input type="text" name="Kilometer" placeholder="Kilometer" required="required" /><br>
-         <input type="text" name="FuelType" placeholder="FuelType" required="required" /><br>
-        <input type="text" name="Brand" placeholder="Brand" required="required" /><br>
+    <label for="RegistrationYear">Year of registration:</label>
+    <input type="number" name="RegistrationYear" placeholder="RegistrationYear" required="required" min="1900" max="2021" value="2010"/>  <br><br>
+    <label for="Power">Power:</label>
+    <input type="number" name="Power" placeholder="Power" required="required"  min="0" max="600" value="130"/>  <br><br>
+    <label for="Kilometer">Kilometer:</label>
+    <input type="number" name="Kilometer" placeholder="Kilometer" required="required"   min="0" max="1000000" value="75000"/>  <br><br>
+
+    <label for="Gearbox">Choose a Gearbox:</label>
+    <select name="Gearbox" placeholder="Gearbox" required="required" /><br>
+    <option value="manual">Manual</option>
+    <option value="auto">Auto</option></select></select>
+    <br><br>
+    <label for="FuelType">Choose a FuelType:</label>
+    <select name="FuelType" placeholder="FuelType" required="required" /><br>
+    <option value="petrol">Petrol</option>
+    <option value="gasoline">Gasoline</option>
+    <option value="lpg">Lpg</option>
+    <option value="hybrid">Hybrid</option>
+    <option value="cng">Cng</option>
+    <option value="electric">Electric</option>
+    <option value="other">Other</option>
+  </select>
+      <br><br>
+  <label for="Brand">Choose a Brand:</label>
+    <select name="Brand" placeholder="Brand" required="required" /><br>
+    <option value="volkswagen">Volkswagen</option>
+    <option value="audi">Audi</option>
+    <option value="jeep">Jeep</option>
+    <option value="skoda">Skoda</option>
+    <option value="bmw">Bmw</option>
+    <option value="peugeot">Peugeot</option>
+    <option value="ford">Ford</option>
+    <option value="mazda">Mazda</option>
+    <option value="nissan">Nissan</option>
+    <option value="renault">Renault</option>
+    <option value="mercedes_benz">Mercedes benz</option>
+    <option value="opel">Opel</option>
+    <option value="seat">Seat</option>
+    <option value="honda">Honda</option>
+    <option value="fiat">Fiat</option>
+    <option value="mini">Mini</option>
+    <option value="smart">Smart</option>
+    <option value="hyundai">Hyundai</option>
+    <option value="sonstige_autos">Sonstige autos</option>
+    <option value="alfa romeo">Alfa romeo</option>
+    <option value="subaru">Subaru</option>
+    <option value="volvo">Volvo</option>
+    <option value="ford">Ford</option>
+    <option value="mitsubishi">Mitsubishi</option>
+    <option value="kia">Kia</option>
+    <option value="suzuki">Suzuki</option>
+    <option value="lancia">Lancia</option>
+    <option value="toyota">Toyota</option>
+    <option value="chevrolet">Chevrolet</option>
+    <option value="dacia">Dacia</option>
+    <option value="daihatsu">Daihatsu</option>
+    <option value="trabant">Trabant</option>
+      <option value="saab">Saab</option>
+    <option value="chrysler">Chrysler</option>
+    <option value="jaguar">Jaguar</option>
+    <option value="daewoo">Daewoo</option>
+    <option value="land rover">Landrover</option>
+    <option value="lada">Lada</option>
+
+  </select>
+
+      <br><br>
 
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        
+
+
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
    <br>
