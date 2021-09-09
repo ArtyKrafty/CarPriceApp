@@ -15,7 +15,7 @@ html { width: 100%; height:100%; overflow:auto; }
 
 body { 
 
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
 	color: #fff;
 	font-size: 11px;
 	text-align:center;
@@ -25,111 +25,149 @@ body {
 
 }
 
-.custom-select-wrapper {
-  position: relative;
-  display: inline-block;
-  user-select: none;
+.container {
+  margin: 80px auto;
+  width: 400px;
+  text-align: center;
 }
-  .custom-select-wrapper select {
-    display: none;
+
+.container > .dropdown {
+  margin: 0 20px;
+  vertical-align: top;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 28px;
+  width: 150px;
+  background: #f2f2f2;
+  border: 1px solid;
+  border-color: white #f7f7f7 whitesmoke;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown:before, .dropdown:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 4px dashed;
+  border-color: #888888 transparent;
+  pointer-events: none;
+}
+
+.dropdown:before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+
+.dropdown:after {
+  margin-top: 7px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+
+.dropdown-select {
+  position: relative;
+  width: 130%;
+  margin: 0;
+  padding: 6px 8px 6px 10px;
+  height: 28px;
+  line-height: 14px;
+  font-size: 12px;
+  color: #62717a;
+  text-shadow: 0 1px white;
+  background: #f2f2f2; /* Fallback for IE 8 */
+  background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.dropdown-select:focus {
+  z-index: 3;
+  width: 100%;
+  color: #394349;
+  outline: 2px solid #49aff2;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.dropdown-select > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Fix for IE 8 putting the arrows behind the select element. */
+
+.lt-ie9 .dropdown {
+  z-index: 1;
+}
+
+.lt-ie9 .dropdown-select {
+  z-index: -1;
+}
+
+.lt-ie9 .dropdown-select:focus {
+  z-index: 3;
+}
+
+/* Dirty fix for Firefox adding padding where it shouldn't. */
+
+@-moz-document url-prefix() {
+  .dropdown-select {
+    padding-left: 6px;
   }
-  .custom-select {
-    position: relative;
-    display: inline-block;
-  }
-    .custom-select-trigger {
-      position: relative;
-      display: block;
-      width: 130px;
-      padding: 0 84px 0 22px;
-      font-size: 22px;
-      font-weight: 300;
-      color: #fff;
-      line-height: 60px;
-      background: #5c9cd8;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-      .custom-select-trigger:after {
-        position: absolute;
-        display: block;
-        content: '';
-        width: 10px; height: 10px;
-        top: 50%; right: 25px;
-        margin-top: -3px;
-        border-bottom: 1px solid #fff;
-        border-right: 1px solid #fff;
-        transform: rotate(45deg) translateY(-50%);
-        transition: all .4s ease-in-out;
-        transform-origin: 50% 0;
-      }
-      .custom-select.opened .custom-select-trigger:after {
-        margin-top: 3px;
-        transform: rotate(-135deg) translateY(-50%);
-      }
-  .custom-options {
-    position: absolute;
-    display: block;
-    top: 100%; left: 0; right: 0;
-    min-width: 100%;
-    margin: 15px 0;
-    border: 1px solid #b5b5b5;
-    border-radius: 4px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 1px rgba(0,0,0,.07);
-    background: #fff;
-    transition: all .4s ease-in-out;
-    
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateY(-15px);
-  }
-  .custom-select.opened .custom-options {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-    transform: translateY(0);
-  }
-    .custom-options:before {
-      position: absolute;
-      display: block;
-      content: '';
-      bottom: 100%; right: 25px;
-      width: 7px; height: 7px;
-      margin-bottom: -4px;
-      border-top: 1px solid #b5b5b5;
-      border-left: 1px solid #b5b5b5;
-      background: #fff;
-      transform: rotate(45deg);
-      transition: all .4s ease-in-out;
-    }
-    .option-hover:before {
-      background: #f9f9f9;
-    }
-    .custom-option {
-      position: relative;
-      display: block;
-      padding: 0 22px;
-      border-bottom: 1px solid #b5b5b5;
-      font-size: 18px;
-      font-weight: 600;
-      color: #b5b5b5;
-      line-height: 47px;
-      cursor: pointer;
-      transition: all .4s ease-in-out;
-    }
-    .custom-option:first-of-type {
-      border-radius: 4px 4px 0 0;
-    }
-    .custom-option:last-of-type {
-      border-bottom: 0;
-      border-radius: 0 0 4px 4px;
-    }
-    .custom-option:hover,
-    .custom-option.selection {
-      background: #f9f9f9;
-    }
+}
+
+.dropdown-dark {
+  background: #444;
+  border-color: #111111 #0a0a0a black;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-dark:before {
+  border-bottom-color: #aaa;
+}
+
+.dropdown-dark:after {
+  border-top-color: #aaa;
+}
+
+.dropdown-dark .dropdown-select {
+  color: #aaa;
+  text-shadow: 0 1px black;
+  background: #444;  /* Fallback for IE 8 */
+}
+
+.dropdown-dark .dropdown-select:focus {
+  color: #ccc;
+}
+
+.dropdown-dark .dropdown-select > option {
+  background: #444;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
 
 .login { 
 	position: absolute;

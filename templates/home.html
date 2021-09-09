@@ -24,14 +24,20 @@
     <input type="number" name="Power" placeholder="Power" required="required"  min="0" max="600" value="130"/>  <br><br>
     <label for="Kilometer">Kilometer:</label>
     <input type="number" name="Kilometer" placeholder="Kilometer" required="required"   min="0" max="1000000" value="75000"/>  <br><br>
-
+    <section class="container">
+    <div class="dropdown dropdown-dark">
     <label for="Gearbox">Choose a Gearbox:</label>
-    <select name="Gearbox" class="custom-select sources" placeholder="Gearbox" required="required" /><br>
+    <select name="Gearbox" class="custom-select sources" placeholder="Gearbox" required="required" class="dropdown-select">
     <option value="manual">Manual</option>
-    <option value="auto">Auto</option></select></select>
+    <option value="auto">Auto</option>    
+  </select>
+  </div>
+</section>
     <br><br>
+    <section class="container">
+    <div class="dropdown dropdown-dark">
     <label for="FuelType">Choose a FuelType:</label>
-    <select name="FuelType" class="custom-select sources" placeholder="FuelType" required="required" /><br>
+    <select name="FuelType" class="custom-select sources" placeholder="FuelType" required="required" class="dropdown-select">
     <option value="petrol">Petrol</option>
     <option value="gasoline">Gasoline</option>
     <option value="lpg">Lpg</option>
@@ -40,9 +46,13 @@
     <option value="electric">Electric</option>
     <option value="other">Other</option>
   </select>
+  </div>
+</section>
       <br><br>
+          <section class="container">
+    <div class="dropdown dropdown-dark">
   <label for="Brand">Choose a Brand:</label>
-    <select name="Brand" class="custom-select sources" placeholder="Brand" required="required" /><br>
+    <select name="Brand" class="custom-select sources" placeholder="Brand" required="required" class="dropdown-select">
     <option value="volkswagen">Volkswagen</option>
     <option value="audi">Audi</option>
     <option value="jeep">Jeep</option>
@@ -81,8 +91,9 @@
     <option value="daewoo">Daewoo</option>
     <option value="land rover">Landrover</option>
     <option value="lada">Lada</option>
-
   </select>
+  </div>
+</section>
 
       <br><br>
 
