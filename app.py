@@ -20,9 +20,9 @@ def predict():
     data_unseen = pd.DataFrame([final], columns = cols)
     prediction = predict_model(model, data=data_unseen, round = 0)
     prediction = int(prediction.Label[0])
-    temp_1 = render_template('home.html',pred_1=f'Expected Price for {final[5]} of {final[0]} year, with {final[1]} kW, {final[2]} miles run, {final[3]} gearbox, {final[4]} fuel type will be')
-    temp_2 = render_template('home.html',pred_2=f'{prediction} $')
-    return temp_1, temp_2
+    
+
+    return render_template('home.html',pred_1=f'Expected Price for {final[5]} of {final[0]} year, with {final[1]} kW, {final[2]} miles run, {final[3]} gearbox, {final[4]} fuel type will be', pred_2=f'{prediction} $')
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
