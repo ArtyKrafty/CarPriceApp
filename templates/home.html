@@ -17,7 +17,7 @@
 	<h1>Predict car price</h1>
 
      <!-- Form to enter new data for predictions  -->
-    <form action="{{ url_for('predict')}}"method="POST">
+    <form action="{{ url_for('predict')}}"method="POST" style="text-align: left;">
     <label for="RegistrationYear">First registration:</label><br> 
     <input type="number" name="RegistrationYear" placeholder="RegistrationYear" required="required" min="1900" max="2021" value="2010"/>  <br><br>
     <label for="Power">Power, kW:</label><br>    
