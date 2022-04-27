@@ -1,6 +1,6 @@
 # [CarPriceApp](https://carpricepredictapp.herokuapp.com/)
 
-Predict price of your car
+Predict price of your car. **Приостановлено** 
 ___
 
 
